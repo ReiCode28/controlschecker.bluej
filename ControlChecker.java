@@ -16,10 +16,9 @@ public class ControlChecker {
 
         if (roomTemperature < 70) {
             return "more heat!";
-        } else{
+        } else {
             return "less heat!";
         }
-
 
 
     }
@@ -32,21 +31,30 @@ public class ControlChecker {
      */
     public String getFuelControls(double fuelLevel) {
 
+        String a = "";
+
         if (fuelLevel < 0.08) {
-            return "refuel";
+            a = "refuel";
         } else {
-            return "burn fuel";
+            a = "burn fuel";
         }
+        return a;
     }
 
     /**
      * Write a method that returns "start fireplace!"
      * if `outsideTemperature` is less than `50` and
-     *    `insideTemperature`  is less than `60`
+     * `insideTemperature`  is less than `60`
      * else returns "stop fireplace!"
      */
     public String getFireplaceControls(int outsideTemperature, int insideTemperature) {
-        return null;
+
+        if (outsideTemperature < 50 && insideTemperature < 60) {
+            return "start fireplace!";
+        } else {
+            return "stop fireplace!";
+        }
+
     }
 }
 
