@@ -13,8 +13,17 @@ public class ControlChecker {
      * else returns "less heat!"
      */
     public String getThermostatControls(int roomTemperature) {
-        return null;
+
+        if (roomTemperature < 70) {
+            return "more heat!";
+        } else{
+            return "less heat!";
+        }
+
+
+
     }
+
 
     /**
      * Write a method that returns "refuel"
@@ -22,7 +31,12 @@ public class ControlChecker {
      * else returns "burn fuel"
      */
     public String getFuelControls(double fuelLevel) {
-        return null;
+
+        if (fuelLevel < 0.08) {
+            return "refuel";
+        } else {
+            return "burn fuel";
+        }
     }
 
     /**
